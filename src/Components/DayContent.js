@@ -32,6 +32,18 @@ const getDayComponent = (day) => {
       return React.lazy(() => import("./Days/Day11"));
     case 12:
       return React.lazy(() => import("./Days/Day12"));
+    case 13:
+      return React.lazy(() => import("./Days/Day13"));
+    case 14:
+      return React.lazy(() => import("./Days/Day14"));
+    case 15:
+      return React.lazy(() => import("./Days/Day15"));
+    case 16:
+      return React.lazy(() => import("./Days/Day16"));
+    case 17:
+      return React.lazy(() => import("./Days/Day17"));
+    case 18:
+      return React.lazy(() => import("./Days/Day18"));
 
     // Ajoutez des cas pour les autres jours
     default:

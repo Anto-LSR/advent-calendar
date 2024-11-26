@@ -68,6 +68,16 @@ const App = () => {
     gcd: "Bien joué! ça commence à se corser. Je vais essayer de rendre ce jeu un peu plus difficile... En attendant je suis ravi que tu aies trouvé la réponse. J'ai hâte de te voir, on est Jeudi aujourd'hui, on se voit demain ?",
     roumaine:
       "Braaaaaavoooo, bon ok c'était pas super difficile, j'essaierai de faire mieux demain. Je me disais que j'aimerais bien qu'on refasse le truc des dessins, c'était cool. ça et un strip-Uno.",
+    nutella:
+      "Bien voué. fétait fa la bonne réponfe. Tu gagnes le droit de prendre une cuillère du nutella que TU AS VOULU QUE JE RAMENE CHEZ MOI CAR A PRIORI JE VAUX MOINS QUE TOI ?? C'EST CA QUVOUS VOULAIENT ???????? coquchine jte nique ;)",
+    esketubez: "Je sais que la réponse est oui................cwoqueuse va.",
+    despacito:
+      "Après le rock, j'espère que tu m'apprendras à danser le reggaeton sur ce merveilleux morceau. Hâte de twerker contre oit.",
+    joselito:
+      " OUI ! c'est ça, et sérieux il est effrayant ce môme. Je me demande si il est encore en vie. -- Ok je viens de taper 'Joselito L'enchanteur 2024' sur google et j'ai appris qu'en réalité il s'appelle : José Jiménez Fernández. Il est encore en vie et sa carrière au cinéma a commencé en 1950 alors qu'il avait 7 ans. Son dernier film date de 2012 et s'appelle : 'El mundo es nuestro' qu'on pourrait traduire par : 'Le roseau plie, mais ne casse qu'en cas de pépin.' ... non, pas du tout.",
+    brie: "Je suis assez fier de ce jeu de mot j'vais pas te mentir, même si j'avoue il est pas de moi. Nan sans déconner gandalf le brie c'est hilarant je peux pas te laisser dire ça.",
+    dondevie:
+      "Putain bravo si t'as trouvé sans que je t'aide il était un peu capillotracté celui-ci. C'est hyper dur de trouver 24 conneries ! ps : jtm ^^",
   };
 
   const handleSubmit = (event) => {
@@ -180,7 +190,9 @@ const App = () => {
               <p className="text-xl">{`Tu as trouvé ${progression.length}/24 codes secrets!`}</p>
               <ol className="mt-4 list-decimal p-10">
                 {progression.slice(0, progression.length).map((code, index) => (
-                  <li key={index}>{passwords[code]}</li>
+                  <li key={index}>
+                    {passwords[index]} {passwords[code]}
+                  </li>
                 ))}
               </ol>
             </div>
