@@ -3,7 +3,7 @@ import React from "react";
 const Day5 = () => {
   return (
     <div className="p-4">
-      <p className="text-2xl font-bold">Jour 6 ! ♥</p>
+      <p className="text-2xl font-bold">Jour 5 ! ♥</p>
 
       <p className="mt-2 text-md">
         <strong>DEVINETTE NOM DE DIEU :</strong>

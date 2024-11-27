@@ -14,7 +14,7 @@ const Day12 = () => {
         Le code est le nom de ces trois accords en Anglais, dans l'ordre où je
         te les ai appris.
       </p>
-      <p className="mt-2 text-lg">Le format est le suivant : "XXX"</p>
+      <p className="mt-2 text-lg">Le format est le suivant : "xxx" (en minuscules)</p>
       <i>- Indice : 0023 - 0230 - 0002</i>
     </div>
   );

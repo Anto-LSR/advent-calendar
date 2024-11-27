@@ -23,8 +23,8 @@ const App = () => {
 
   // Returns current date in DD/MM/YYYY format for testing purposes
   function getCurrentDate() {
-    // return new Date().toLocaleDateString("fr-FR");
-    return "24/12/2024"; // Adjust this for testing
+    return new Date().toLocaleDateString("fr-FR");
+    // return "24/12/2024"; // Adjust this for testing
   }
 
   useEffect(() => {
@@ -78,6 +78,19 @@ const App = () => {
     brie: "Je suis assez fier de ce jeu de mot j'vais pas te mentir, même si j'avoue il est pas de moi. Nan sans déconner gandalf le brie c'est hilarant je peux pas te laisser dire ça.",
     dondevie:
       "Putain bravo si t'as trouvé sans que je t'aide il était un peu capillotracté celui-ci. C'est hyper dur de trouver 24 conneries ! ps : jtm ^^",
+    dofus:
+      "Eh oui c'est ça... et j'adore ce jeu, j'y joue depuis que j'ai 12 ans. Il y a eu un film d'animation d'ailleurs, il est vraiment cool. J'espère que tu aimes les bouftous. D'ailleurs le déssin animé 'Wakfu' vient du même studio que Dofus. C'est un peu la même ambiance.",
+    piflard:
+      "Nous sommes de vrais ivrognes, mais bon on a 30 ans et on va sur nos 31, si c'est pas maintenant du piflard quand est-ce que ça sera ?",
+    calendrier:
+      "Bravo mi amor, JTM et j'espère vraiment que ce calendrier te plaît. J'y ai passé du temps et j'ai essayé de faire en sorte que chaque jour soit un peu spécial. Ptite pipe ?",
+    "12/09":
+      "Hé oui, n'est-ce pas cocasse ? - fin pour aujourd'hui j'ai autant d'inspiration que Yuna a de neuronnes.",
+    jouir:
+      "Bravo, tu me connais bien. Je suis un gigantesque coquin. Mais ça tu le sais déjà, coquchine va.",
+    "je t'aime":
+      "Moi aussi je t'aime mon KEUR, passes un excellent réveillon avec ta famille. Je suis très reconnaissant de t'avoir dans ma vie. J'ai hâte de te voir ❤",
+    "on ken ?": "Quand tu veux ma grande ;) ;) ;) ;) ;) ;)",
   };
 
   const handleSubmit = (event) => {
@@ -225,15 +238,24 @@ const App = () => {
           <div className="p-6 bg-white rounded-lg shadow-lg text-center">
             {customModalContent ? (
               <div>
-                <p className="text-2xl mb-2">{customModalTitle} </p>
+                <p className="text-2xl mb-2">{customModalTitle}</p>
                 {customModalContent}
-                <p className="mt-4">
-                  <i>A demain beauté fatale!</i>
-                </p>
+                {currentDay !== "24/12/2024" && (
+                  <p className="mt-4">
+                    <i>A demain beauté fatale!</i>
+                  </p>
+                )}
+
+                {currentDay == "24/12/2024" && (
+                  <p className="mt-4">
+                    <i>Voyeux noël botay fatale 🎄🎄🎄🎄</i>
+                  </p>
+                )}
               </div>
             ) : (
               <DayContent day={currentDay} />
             )}
+
             <button
               onClick={closeModal}
               className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
